@@ -23,8 +23,8 @@ theme = 'hugo-theme-spectra'
   # contentImageQuality = 90         # 內文圖片壓縮品質（1-100，需搭配 imageOptimize = true）
 
   # === Banner Text (uncomment to customize) ===
-  bannerTitle = 'My'
-  bannerHighlight = 'Tech Notes'
+  # bannerTitle = 'My'
+  # bannerHighlight = 'Tech Notes'
   # bannerSubtitle = '// blog × code × ideas'
 
   # === Feature Toggles (default: true, set false to disable) ===
@@ -104,7 +104,7 @@ theme = 'hugo-theme-spectra'
       author = 'Your Name'
       tagline = '// Developer'
       bio = '這是一個示範網站，展示 Spectra 主題的所有功能。'
-      banner = '/images/demo02.jpg'
+      #banner = '/images/demo02.jpg'
       #avatar = '/images/avatar.webp'
 
       [[languages.zh-tw.params.social]]
