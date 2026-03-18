@@ -3,6 +3,11 @@
 # Merged with site-level hugo.toml by Hugo
 # ============================================
 
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.157.0"
+
 [outputs]
   home = ['HTML', 'RSS', 'JSON']
 

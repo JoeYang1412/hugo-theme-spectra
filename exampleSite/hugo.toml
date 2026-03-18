@@ -101,7 +101,7 @@ theme = 'hugo-theme-spectra'
 
     [languages.zh-tw.params]
       description = '一款具有科幻風格的 Hugo 部落格主題'
-      author = 'Your Name'
+      author = 'JoeYang1412'
       tagline = '// Developer'
       bio = '這是一個示範網站，展示 Spectra 主題的所有功能。'
       #banner = '/images/demo02.jpg'
@@ -109,13 +109,13 @@ theme = 'hugo-theme-spectra'
 
       [[languages.zh-tw.params.social]]
         name = "GitHub"
-        url = "https://github.com/your-account"
+        url = "https://github.com/JoeYang1412"
       [[languages.zh-tw.params.social]]
         name = "Twitter"
-        url = "https://x.com/your-account"
+        url = "https://x.com/YangJoe0208"
       [[languages.zh-tw.params.social]]
-        name = "RSS"
-        url = "/index.xml"
+        name = "hackmd"
+        url = "https://hackmd.io/@JoeYang"
 
     # -- Navigation Menu --
     [[languages.zh-tw.menus.main]]
@@ -142,19 +142,19 @@ theme = 'hugo-theme-spectra'
 
     [languages.en.params]
       description = 'A sci-fi fusion Hugo blog theme'
-      author = 'Your Name'
+      author = 'JoeYang1412'
       tagline = '// Developer'
       bio = 'This is a demo site showcasing all features of the Spectra theme.'
 
       [[languages.en.params.social]]
         name = "GitHub"
-        url = "https://github.com/your-account"
+        url = "https://github.com/JoeYang1412"
       [[languages.en.params.social]]
         name = "Twitter"
-        url = "https://x.com/your-account"
+        url = "https://x.com/YangJoe0208"
       [[languages.en.params.social]]
-        name = "RSS"
-        url = "/index.xml"
+        name = "hackmd"
+        url = "https://hackmd.io/@JoeYang"
 
     [[languages.en.menus.main]]
       name = "Home"
