@@ -1,0 +1,13 @@
+name = "Spectra"
+license = "MIT"
+licenselink = ""
+description = "A sci-fi fusion Hugo theme with smooth animations, dark/light mode, and parallax banner."
+homepage = ""
+demosite = ""
+tags = 
+features = 
+min_version = "0.157.0"
+
+[author]
+  name = "JoeYang1412"
+  homepage = "https://github.com/JoeYang1412"
