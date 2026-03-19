@@ -20,7 +20,7 @@ theme = 'hugo-theme-spectra'
   relatedPostsLimit = 3
   cardImageQuality = 80
   coverImageQuality = 85
-  # contentImageQuality = 90         # 內文圖片壓縮品質（1-100，需搭配 imageOptimize = true）
+  # contentImageQuality = 90         # 內文圖片壓縮品質（1-100，需搭配 imageOptimize = true，預設已開啟）
 
   # === Banner Text (uncomment to customize) ===
   # bannerTitle = 'My'
@@ -101,7 +101,7 @@ theme = 'hugo-theme-spectra'
 
     [languages.zh-tw.params]
       description = '一款具有科幻風格的 Hugo 部落格主題'
-      author = 'JoeYang1412'
+      author = 'Your name'
       tagline = '// Developer'
       bio = '這是一個示範網站，展示 Spectra 主題的所有功能。'
       #banner = '/images/demo02.jpg'
@@ -142,7 +142,7 @@ theme = 'hugo-theme-spectra'
 
     [languages.en.params]
       description = 'A sci-fi fusion Hugo blog theme'
-      author = 'JoeYang1412'
+      author = 'Your name'
       tagline = '// Developer'
       bio = 'This is a demo site showcasing all features of the Spectra theme.'
 
