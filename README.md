@@ -4,7 +4,7 @@ A Hugo blog theme blending sci-fi aesthetics with modern UI, featuring animation
 
 **[Live Demo](https://joeyang1412.github.io/hugo-theme-spectra/)**
 
-![Spectra Screenshot](images/screenshot.jpg)
+![Screenshot](https://raw.githubusercontent.com/JoeYang1412/hugo-theme-spectra/main/images/screenshot.jpg)
 
 ## Table of Contents
 

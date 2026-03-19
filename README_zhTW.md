@@ -4,7 +4,7 @@
 
 **[線上 Demo](https://joeyang1412.github.io/hugo-theme-spectra/)**
 
-![Spectra Screenshot](images/screenshot_zhTW.jpg)
+![Screenshot](https://raw.githubusercontent.com/JoeYang1412/hugo-theme-spectra/main/images/screenshot_zhTW.jpg)
 
 ## 目錄
 
