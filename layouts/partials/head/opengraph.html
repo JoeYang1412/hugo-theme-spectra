@@ -46,7 +46,7 @@
      per-language 404 pages as real static files. Redirect before body renders. */}}
 {{ if eq .Kind "404" }}
 {{ $homes := dict }}
-{{ range .Sites }}
+{{ range hugo.Sites }}
   {{ $homes = merge $homes (dict .Language.Lang .Home.RelPermalink) }}
 {{ end }}
 <script data-homes="{{ $homes | jsonify }}" data-dl="{{ .Site.Language.Lang }}">
