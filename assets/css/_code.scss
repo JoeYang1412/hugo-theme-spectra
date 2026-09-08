@@ -18,6 +18,11 @@
   background: var(--bg-code-header);
   font-family: var(--font-mono);
   font-size: var(--font-size-label);
+
+  // Preserve control height when the enclosing Markdown list uses 1.75 leading.
+  .single-layout > .article-content :is(ul, ol) & {
+    line-height: 1.85;
+  }
 }
 
 // Code language label (uppercase monospace)
@@ -58,6 +63,43 @@
   overflow: hidden;
   border: 1px solid var(--border);
 
+  // One horizontal scrollport keeps table-mode line numbers and code together.
+  > .chroma {
+    overflow-x: auto;
+    background: var(--bg-code);
+  }
+
+  // Chroma uses a table for code layout, so discard article table decoration.
+  .lntable {
+    margin: 0;
+    border: 0;
+
+    td {
+      padding: 0;
+      border: 0;
+      vertical-align: top;
+
+      // Let the digits determine the gutter's minimum width.
+      &:first-child {
+        box-sizing: border-box;
+        width: 1%;
+        white-space: nowrap;
+        user-select: none;
+      }
+    }
+
+    pre {
+      overflow: visible;
+      padding-inline: 0.75rem;
+    }
+
+    // Match the gutter padding while accounting for the 3px highlight border.
+    .hl {
+      margin-inline: -0.75rem;
+      padding-inline: calc(0.75rem - 3px) 0.75rem;
+    }
+  }
+
   pre {
     margin: 0;
     border: none;
@@ -80,6 +122,17 @@ pre {
   margin: 1.5rem 0;
   border-radius: var(--radius-sm);
 
+  .single-layout > .article-content & {
+    font-size: 0.85rem;
+    line-height: 1.45;
+    padding-block: 1rem;
+
+    // Leave the line-number table's horizontal gutter padding intact.
+    &:not(.lntable pre) {
+      padding-inline: 1rem;
+    }
+  }
+
   // Code element inside pre: reset background
   code {
     font-family: var(--font-mono);
@@ -89,7 +142,17 @@ pre {
     background: none;
     padding: 0;
     border-radius: 0;
+
+    .single-layout > .article-content & {
+      line-height: 1.45;
+    }
   }
+}
+
+// Only the outer code box owns article spacing, with or without code-copy.js.
+// Keep the nested .highlight/pre margin resets above in charge of the interior.
+.single-layout > .article-content :is(.code-block-wrapper, .highlight, pre):not(.code-block-wrapper *, .highlight *) {
+  margin-block: 0 1rem;
 }
 
 // Chroma syntax highlighting token color map — all controlled via CSS variables

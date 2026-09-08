@@ -6,6 +6,10 @@
   border-radius: var(--radius-sm);
   margin: 1.5rem 0;
   overflow: hidden;
+
+  .single-layout > .article-content & {
+    margin-block: 0 1rem;
+  }
 }
 
 // Notice block header (icon + title)
@@ -19,8 +23,9 @@
   font-weight: 600;
 }
 
-// Notice block icon
+// Keep the icon markup available, but hide it in the default presentation.
 .notice-icon {
+  display: none;
   font-size: 1rem;
   flex-shrink: 0;
 }
@@ -83,6 +88,10 @@
   border-radius: var(--radius-sm);
   margin: 1.5rem 0;
   overflow: hidden;
+
+  .single-layout > .article-content & {
+    margin-block: 0 1rem;
+  }
 
   // Collapse header row with triangle expand indicator
   summary {

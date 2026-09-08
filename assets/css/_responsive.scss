@@ -247,6 +247,14 @@
   }
 }
 
+// Markdown heading breakpoint is independent of the sidebar's 900px breakpoint.
+@media (max-width: 767px) {
+  .single-layout > .article-content {
+    h2 { font-size: 1.4rem; }
+    h3 { font-size: 1.125rem; }
+  }
+}
+
 // Small screen breakpoint (<=600px): further reduce spacing, cards go vertical
 @media (max-width: $bp-small) {
   .main-content {
