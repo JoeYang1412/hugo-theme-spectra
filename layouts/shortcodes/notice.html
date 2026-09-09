@@ -1,11 +1,12 @@
 {{- $type := .Get "type" | default "info" -}}
-{{- if not (in (slice "info" "tip" "warning" "caution") $type) }}{{ $type = "info" }}{{ end -}}
+{{- if not (in (slice "info" "tip" "important" "warning" "caution") $type) }}{{ $type = "info" }}{{ end -}}
 {{- $title := .Get "title" -}}
 <div class="notice notice-{{ $type }}" role="note">
   <div class="notice-header">
     <span class="notice-icon">
       {{- if eq $type "info" -}}&#9432;
       {{- else if eq $type "tip" -}}&#9733;
+      {{- else if eq $type "important" -}}&#9432;
       {{- else if eq $type "warning" -}}&#9888;
       {{- else if eq $type "caution" -}}&#9888;
       {{- end -}}

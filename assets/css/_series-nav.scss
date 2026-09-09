@@ -1,6 +1,7 @@
 // ===== Series Navigation =====
 
 .series-nav {
+  --series-text-inset: 2rem;
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   margin: 1.5rem 0;
@@ -43,7 +44,11 @@
 
 .series-list-toggle {
   summary {
-    padding: 0.6rem 1.2rem;
+    position: relative;
+    display: block;
+    margin-left: var(--series-text-inset);
+    padding: 0.6rem 1.2rem 0.6rem 0;
+    list-style: none;
     font-family: var(--font-mono);
     font-size: var(--font-size-label);
     color: var(--text-secondary);
@@ -51,9 +56,34 @@
     user-select: none;
     transition: color var(--transition);
 
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -0.85rem;
+      top: 50%;
+      margin-top: -0.3em;
+      border-block: 0.3em solid transparent;
+      border-left: 0.45em solid currentColor;
+      transition: transform 0.35s $ease-default;
+    }
+
     &:hover {
       color: var(--accent);
     }
+  }
+
+  &[open]:not(.is-closing) summary::before {
+    transform: rotate(90deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .series-list-toggle summary::before {
+    transition: none;
   }
 }
 
@@ -64,11 +94,14 @@
 }
 
 .series-list {
-  padding: 0 1.2rem 0.8rem 2.4rem;
+  padding: 0 1.2rem 0.8rem calc(var(--series-text-inset) + 0.1rem);
   margin: 0;
   font-size: 0.85rem;
+  list-style: none;
 
   li {
+    display: grid;
+    grid-template-columns: 3ch minmax(0, 1fr);
     padding: 4px 0;
     line-height: 1.5;
   }
@@ -84,19 +117,13 @@
   }
 }
 
+.series-number {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-weight: 400;
+}
+
 .series-current {
   color: var(--accent);
   font-weight: 600;
-
-  span {
-    position: relative;
-    padding-left: 4px;
-
-    &::before {
-      content: '\25B8';
-      position: absolute;
-      left: -12px;
-      color: var(--accent);
-    }
-  }
 }

@@ -17,9 +17,10 @@
       <details class="series-list-toggle">
         <summary>{{ i18n "series_view_all" }}</summary>
         <div class="series-list-content">
-        <ol class="series-list">
+        <ol class="series-list" role="list">
           {{- range $i, $p := $posts -}}
           <li{{ if eq $p.RelPermalink $.RelPermalink }} class="series-current"{{ end }}>
+            <span class="series-number" aria-hidden="true">{{ add $i 1 }}.</span>
             {{ if eq $p.RelPermalink $.RelPermalink }}
               <span>{{ $p.Title }}</span>
             {{ else }}

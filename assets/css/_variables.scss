@@ -85,11 +85,14 @@ $banner-overflow: -400px;
 
   // Notice colors
   --notice-tip: #16a34a;
-  --notice-tip-bg: rgba(22, 163, 74, 0.08);
+  --notice-tip-bg: rgba(22, 163, 74, 0.12);
   --notice-warning: #d97706;
-  --notice-warning-bg: rgba(217, 119, 6, 0.08);
+  --notice-warning-bg: rgba(217, 119, 6, 0.12);
   --notice-info: var(--accent);
   --notice-info-bg: var(--accent-glow);
+  --notice-important: #7c3aed;
+  --notice-important-border: #a78bfa;
+  --notice-important-bg: rgba(167, 139, 250, 0.12);
   --notice-caution: var(--accent-warm);
   --notice-caution-bg: var(--accent-warm-glow);
 
@@ -174,13 +177,15 @@ $banner-overflow: -400px;
 
   // Notice colors
   --notice-tip: #4ade80;
-  --notice-tip-bg: rgba(22, 163, 74, 0.12);
+  --notice-tip-bg: rgba(22, 163, 74, 0.22);
   --notice-warning: #fbbf24;
-  --notice-warning-bg: rgba(217, 119, 6, 0.12);
+  --notice-warning-bg: rgba(217, 119, 6, 0.22);
   --notice-info: #93bbfd;
-  --notice-info-bg: rgba(91, 141, 238, 0.12);
+  --notice-info-bg: rgba(91, 141, 238, 0.22);
+  --notice-important: #c4b5fd;
+  --notice-important-bg: rgba(167, 139, 250, 0.22);
   --notice-caution: #f9a8d4;
-  --notice-caution-bg: rgba(244, 114, 182, 0.12);
+  --notice-caution-bg: rgba(244, 114, 182, 0.22);
 
   // Banner — dark mode
   --banner-bg-1: #0b0f19;

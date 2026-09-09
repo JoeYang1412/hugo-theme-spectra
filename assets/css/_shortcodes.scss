@@ -17,7 +17,7 @@
   display: flex;
   align-items: center;
   gap: var(--gap-xs);
-  padding: 0.6rem 1.2rem;
+  padding: 0.8rem 1.2rem 0.25rem;
   font-family: var(--font-display);
   font-size: 0.85rem;
   font-weight: 600;
@@ -32,7 +32,7 @@
 
 // Notice block content area
 .notice-content {
-  padding: 0.8rem 1.2rem;
+  padding: 0.25rem 1.2rem 0.8rem;
   font-size: 0.95rem;
 
   p:last-child {
@@ -42,40 +42,55 @@
 
 // Info notice (blue left border)
 .notice-info {
-  border-left: 3px solid var(--accent);
+  border-color: rgba(91, 141, 238, 0.5);
+  border-left: 4px solid var(--accent);
+  background: var(--notice-info-bg);
 
   .notice-header {
-    background: var(--notice-info-bg);
     color: var(--notice-info);
+  }
+}
+
+// Important notice (purple left border)
+.notice-important {
+  border-color: rgba(167, 139, 250, 0.5);
+  border-left: 4px solid var(--notice-important-border);
+  background: var(--notice-important-bg);
+
+  .notice-header {
+    color: var(--notice-important);
   }
 }
 
 // Tip notice (green left border)
 .notice-tip {
-  border-left: 3px solid var(--notice-tip);
+  border-color: rgba(22, 163, 74, 0.5);
+  border-left: 4px solid var(--notice-tip);
+  background: var(--notice-tip-bg);
 
   .notice-header {
-    background: var(--notice-tip-bg);
     color: var(--notice-tip);
   }
 }
 
 // Warning notice (orange left border)
 .notice-warning {
-  border-left: 3px solid var(--notice-warning);
+  border-color: rgba(217, 119, 6, 0.5);
+  border-left: 4px solid var(--notice-warning);
+  background: var(--notice-warning-bg);
 
   .notice-header {
-    background: var(--notice-warning-bg);
     color: var(--notice-warning);
   }
 }
 
 // Caution notice (pink left border)
 .notice-caution {
-  border-left: 3px solid var(--accent-warm);
+  border-color: rgba(244, 114, 182, 0.5);
+  border-left: 4px solid var(--accent-warm);
+  background: var(--notice-caution-bg);
 
   .notice-header {
-    background: var(--notice-caution-bg);
     color: var(--notice-caution);
   }
 }
